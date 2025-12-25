@@ -3,6 +3,8 @@ import { useState } from "react";
 
 import styles from "./Layout.module.css";
 import { CiLogin } from "react-icons/ci";
+import { IoIosContact } from "react-icons/io";
+import { FaRegAddressCard } from "react-icons/fa6";
 import { IoMdArrowDropdown } from "react-icons/io";
 
 const image = "./stylish-concept-sport-car-silhouette-black-background_684457-136.avif";
@@ -35,11 +37,11 @@ function Layout({ children }) {
                 <Link href="/">Home</Link>
               </li>
             </ul>
-            <Link href="/">About Us</Link>
-            <Link href="/">Contact Us</Link>
+            <Link href="/" className={styles.login}>About Us <FaRegAddressCard /></Link>
+            <Link href="/" className={styles.login}>Contact Us <IoIosContact /></Link>
             <div className={styles.login}>
-              <CiLogin />
               <span>Login</span>
+              <CiLogin />
             </div>
           </div>
         </div>
