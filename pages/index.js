@@ -1,7 +1,4 @@
+import styles from "../styles/mainPage.module.css";
 export default function Home() {
-  return (
-    <>
-      <h1>this is an auto car selling page</h1>
-    </>
-  );
+  return <div className={styles.mainPage}></div>;
 }

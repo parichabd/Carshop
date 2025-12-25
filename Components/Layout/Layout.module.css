@@ -3,17 +3,32 @@
   flex-direction: column;
   align-items: center;
   padding: 15px 0;
-  background-color: #befa00;
-  width: 440px;
-  margin: 10px auto;
   border-radius: 5px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  font-family: DM Sans, sans-serif;
+  color: #000;
 }
 
-.header h2 {
-  font-size: 2.3rem;
-  border-bottom: 1px solid black;
-  width: fit-content;
-  margin-bottom: 10px;
+.logo img {
+  height: 40px;
+  width: auto;
+  border-radius: 50;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.links{
+  display: flex;
+  gap: 20px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .footer {
@@ -22,6 +37,13 @@
   color: grey;
   padding: 10px 0;
   margin-top: 30px;
+}
+.login{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .footer a {
@@ -38,3 +60,59 @@
     width: 320px;
   }
 }
+
+.btnPrimary{
+  border: none;
+  padding: 10px 20px;
+all: unset;
+}
+
+.menu {
+  position: absolute;
+  top: 100%;      
+  
+  min-width: 150px;
+  border-radius: 5px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+
+  z-index: 1000;
+}
+
+.menu.show {
+  max-height: 200px;
+  opacity: 1;
+  transform: translateY(0);
+}
+.links > a,
+.links > button,
+.links > div {
+  position: relative;
+  padding: 6px 10px;
+}
+
+
+.links > a::after,
+.links > button::after,
+.links > div::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #000, #888);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.links > a:hover::after,
+.links > button:hover::after,
+.links > div:hover::after {
+  transform: scaleX(1);
+}
+
