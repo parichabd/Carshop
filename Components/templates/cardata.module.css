@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.title{
+    font-family: 'Arial Black', sans-serif;
+    font-style: italic;
+     width: calc(100vw - 3rem); 
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 3rem;
+}

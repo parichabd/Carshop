@@ -1,0 +1,59 @@
+.container {
+  width: calc(100vw - 9rem);
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+.ads {
+  display: flex;
+  align-items: center;      
+  gap: 4rem;                  
+  background: #f5f7fa;      
+  padding: 3rem;
+  border-radius: 16px;
+}
+
+.ads video {
+  width: 50%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.ads > div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.ads h1 {
+  font-size: 2.2rem;
+  line-height: 1.2;
+}
+
+.ads p {
+  color: #555;
+  max-width: 90%;
+  line-height: 1.6;
+}
+
+.ads button {
+  margin-top: 1.5rem;
+  width: fit-content;
+  padding: 0.8rem 1.6rem;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ads button:hover {
+  background: #000;
+  transform: translateY(-2px);
+}
